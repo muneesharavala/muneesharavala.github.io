@@ -1,0 +1,477 @@
+/* ---------------- General Reset ---------------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ---------------- Body Styling ---------------- */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  background-color: #121212;
+  color: #c9d1d9;
+  transition: all 0.3s ease;
+}
+
+/* Light Mode */
+body.light {
+  background-color: #fff;
+  color: #000;
+}
+
+/* ---------------- Navbar Styling ---------------- */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: #161b22;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
+  transition: all 0.3s ease;
+}
+
+body.light .navbar {
+  background-color: #f5f5f5;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+  font-size: 1.8rem;
+  color: #58a6ff;
+  font-weight: bold;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 2rem;
+}
+
+.nav-links a {
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+  color: #c9d1d9;
+}
+
+body.light .nav-links a {
+  color: #000;
+}
+
+.nav-links a:hover,
+.nav-links .active {
+  color: #58a6ff;
+}
+
+/* Theme Toggle Button */
+.theme-toggle button {
+  background: none;
+  border: none;
+  font-size: 1.3rem;
+  cursor: pointer;
+  color: #c9d1d9;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+body.light .theme-toggle button {
+  color: #000;
+}
+
+.theme-toggle button.toggle-animate {
+  transform: rotate(360deg);
+}
+
+
+body.light .theme-toggle button {
+  color: #000;
+}
+
+/* ---------------- Hero Section ---------------- */
+.hero {
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 50px 20px;
+
+  background: linear-gradient(
+    135deg,
+    #1e3a8a,
+    #0f172a,
+    #020617
+  );
+
+  transition: all 0.3s ease;
+}
+
+
+body.light .hero {
+  background: linear-gradient(135deg, #e0e0e0, #ffffff);
+}
+
+.hero-image img {
+  max-width: 200px;
+  border-radius: 50%;
+  display: block;
+  margin: 0 auto 20px auto;
+}
+
+.hero-content h1 {
+  font-size: 3rem;
+  color: #58a6ff;
+}
+
+.hero-content p {
+  font-size: 1.2rem;
+  margin: 1rem 0;
+  color: #8b949e;
+}
+
+body.light .hero-content p {
+  color: #333;
+}
+
+/* Button Styling */
+.btn {
+  padding: 12px 30px;
+  background-color: #238636;
+  color: #fff;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #2ea043;
+}
+
+body.light .btn {
+  background-color: #58a6ff;
+  color: #fff;
+}
+
+body.light .btn:hover {
+  background-color: #1f6feb;
+}
+
+/* ---------------- Section Styling ---------------- */
+section {
+  max-width: 1100px;
+  margin: 3rem auto;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
+}
+
+/* About Section */
+.about {
+  background-color: #161b22;
+  color: #c9d1d9;
+}
+
+body.light .about {
+  background-color: #f5f5f5;
+  color: #000;
+}
+
+.about-content p {
+  margin-bottom: 1rem;
+  font-size: 1rem;
+}
+
+.about-content h3 {
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
+  color: #79c0ff;
+}
+
+body.light .about-content h3 {
+  color: #1f6feb;
+}
+
+.about-content ul {
+  list-style: disc;
+  margin-left: 1.5rem;
+}
+
+/* Projects Section */
+.projects {
+  background-color: #161b22;
+  color: #c9d1d9;
+}
+
+body.light .projects {
+  background-color: #f5f5f5;
+  color: #000;
+}
+
+.project-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 2rem;
+}
+
+.project-card {
+  background-color: #0d1117;
+  border: 1px solid #30363d;
+  border-radius: 10px;
+  padding: 1rem;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+body.light .project-card {
+  background-color: #ffffff;
+  border: 1px solid #ccc;
+}
+
+.project-card:hover {
+  transform: translateY(-6px);
+}
+
+.project-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+
+.project-card h3 {
+  color: #58a6ff;
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+body.light .project-card h3 {
+  color: #1f6feb;
+}
+
+.project-card p {
+  color: #8b949e;
+  font-size: 0.95rem;
+}
+
+body.light .project-card p {
+  color: #333;
+}
+
+/* Contact Section */
+.contact {
+  background-color: #161b22;
+  color: #c9d1d9;
+}
+
+body.light .contact {
+  background-color: #f5f5f5;
+  color: #000;
+}
+
+.contact input,
+.contact textarea {
+  padding: 0.9rem;
+  border: 1px solid #30363d;
+  background-color: #0d1117;
+  color: #c9d1d9;
+  border-radius: 8px;
+  font-size: 1rem;
+  width: 100%;
+  transition: all 0.3s ease;
+}
+
+body.light .contact input,
+body.light .contact textarea {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  color: #000;
+}
+
+.contact input:focus,
+.contact textarea:focus {
+  border-color: #58a6ff;
+  outline: none;
+}
+
+.contact button.btn {
+  background-color: #58a6ff;
+  color: #0d1117;
+}
+
+.contact button.btn:hover {
+  background-color: #1f6feb;
+  color: #fff;
+}
+
+/* ---------------- Footer ---------------- */
+footer {
+  background-color: #161b22;
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.9rem;
+  color: #8b949e;
+  transition: all 0.3s ease;
+}
+
+body.light footer {
+  background-color: #f5f5f5;
+  color: #000;
+}
+
+.social-icons {
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.social-icons a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: inherit;
+  text-decoration: none;
+  font-size: 0.85rem;
+}
+
+.social-icons img {
+  width: 30px;
+  height: auto;
+  margin-bottom: 5px;
+  transition: transform 0.3s ease;
+}
+
+.social-icons img:hover {
+  transform: scale(1.1);
+}
+
+/* ---------------- Back to Top Button ---------------- */
+#back-to-top {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  display: none;
+  background-color: #333;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 50%;
+  font-size: 20px;
+  cursor: pointer;
+  z-index: 999;
+  opacity: 0.8;
+  transition: opacity 0.3s ease, background-color 0.3s ease;
+}
+
+#back-to-top:hover {
+  opacity: 1;
+  background-color: #555;
+}
+
+body.light #back-to-top {
+  background-color: #ccc;
+  color: #000;
+}
+
+/* ---------------- Fade-In Effect ---------------- */
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.8s ease-out;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ---------------- Responsive Design ---------------- */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 1rem;
+  }
+
+  .about, .projects, .contact {
+    margin: 2rem 1rem;
+    padding: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  footer img {
+    width: 20px;
+  }
+}
+
+.project-card .btn {
+  margin-top: 10px;
+  display: inline-block;
+}
+
+.project-card .btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
+}
+
+.activities-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.8rem;
+  margin-top: 1.5rem;
+}
+
+.activity-card {
+  background: linear-gradient(145deg, #0d1117, #161b22);
+  border: 1px solid #30363d;
+  border-radius: 14px;
+  padding: 1.4rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.activity-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+.activity-card h3 {
+  color: #58a6ff;
+  margin-bottom: 0.6rem;
+  font-size: 1.15rem;
+}
+
+.activity-card p {
+  font-size: 0.95rem;
+  color: #c9d1d9;
+  margin-bottom: 0.8rem;
+}
+
+.tag {
+  display: inline-block;
+  background-color: #21262d;
+  color: #8b949e;
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  margin: 3px 4px 0 0;
+}
+
+body.light .activity-card {
+  background: #ffffff;
+  border: 1px solid #ddd;
+}
+
+body.light .tag {
+  background-color: #f0f0f0;
+  color: #333;
+}
